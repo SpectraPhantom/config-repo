@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: "true"
+    database: mysql
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.MySQL5Dialect"
+  datasource:
+    url: "jdbc:mysql://localhost:3306/itemsharingdatabase"
+    username: "root"
+    password: "{cipher}fb9c82e47704ebea5965914e06b2649938f0dd2c13a9dfeb4e44fde1e53bdda7"
+    dbcp2:
+      test-while-idle: true
+      validation-query: "SELECT 1"
+
+server:
+  port: 8081
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/

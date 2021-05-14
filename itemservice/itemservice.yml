@@ -8,7 +8,7 @@ spring:
       hibernate:
         dialect: "org.hibernate.dialect.MySQL5Dialect"
   datasource:
-    url: "jdbc:mysql://localhost:3306/itemsharingdatabase"
+    url: "jdbc:mysql://localhost:3306/itemsharingdatabase?createDatabaseIfNotExist=true"
     username: "root"
     password: "{cipher}fb9c82e47704ebea5965914e06b2649938f0dd2c13a9dfeb4e44fde1e53bdda7"
     dbcp2:
